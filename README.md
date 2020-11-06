@@ -1,6 +1,10 @@
 # wp-smartbanner
 A customisable WordPress smart app banner for iOS and Android.
 
+## Composer
+Use composer to require all dependencies:
+`composer update` or `composer install`
+
 ## Building the assets
 Use npm to build all assets:
 `npm run build`
