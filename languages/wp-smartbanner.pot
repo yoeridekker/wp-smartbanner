@@ -1,0 +1,158 @@
+# Copyright (C) 2020 Yoeri Dekker
+# This file is distributed under the same license as the WP Smart Banner plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Smart Banner 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-smartbanner\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-11-06T13:13:42+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: wp-smartbanner\n"
+
+#. Plugin Name of the plugin
+msgid "WP Smart Banner"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://www.3eighty.nl/smartbanner"
+msgstr ""
+
+#. Description of the plugin
+msgid "A customisable WordPress smart app banner for iOS and Android."
+msgstr ""
+
+#. Author of the plugin
+msgid "Yoeri Dekker"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.3eighty.nl"
+msgstr ""
+
+#: includes/admin/options_page.php:22
+#: includes/admin/options_page.php:23
+#: includes/admin/options_page.php:34
+msgctxt "backend"
+msgid "Smartbanner"
+msgstr ""
+
+#: includes/admin/options_page.php:35
+msgctxt "backend"
+msgid "Customize the smartbanner settings."
+msgstr ""
+
+#: includes/admin/options_page.php:41
+msgctxt "backend"
+msgid "Save"
+msgstr ""
+
+#: includes/admin/options_page.php:57
+msgctxt "backend"
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/options_page.php:64
+msgctxt "backend"
+msgid "App name"
+msgstr ""
+
+#: includes/admin/options_page.php:72
+msgctxt "backend"
+msgid "Author name"
+msgstr ""
+
+#: includes/admin/options_page.php:80
+msgctxt "backend"
+msgid "Price label"
+msgstr ""
+
+#: includes/admin/options_page.php:88
+msgctxt "backend"
+msgid "View label"
+msgstr ""
+
+#: includes/admin/options_page.php:96
+msgctxt "backend"
+msgid "Close label"
+msgstr ""
+
+#: includes/admin/options_page.php:104
+msgctxt "backend"
+msgid "Show on iOs"
+msgstr ""
+
+#: includes/admin/options_page.php:112
+msgctxt "backend"
+msgid "Apple App Store url"
+msgstr ""
+
+#: includes/admin/options_page.php:120
+msgctxt "backend"
+msgid "Apple App Store Icon url"
+msgstr ""
+
+#: includes/admin/options_page.php:128
+msgctxt "backend"
+msgid "Apple App Store tagline"
+msgstr ""
+
+#: includes/admin/options_page.php:136
+msgctxt "backend"
+msgid "Show on Android"
+msgstr ""
+
+#: includes/admin/options_page.php:144
+msgctxt "backend"
+msgid "Google Play Store url"
+msgstr ""
+
+#: includes/admin/options_page.php:152
+msgctxt "backend"
+msgid "Google Play Store Icon url"
+msgstr ""
+
+#: includes/admin/options_page.php:160
+msgctxt "backend"
+msgid "Google Play Store tagline"
+msgstr ""
+
+#: wp-smartbanner.php:94
+msgctxt "backend"
+msgid "WP Smartbanner"
+msgstr ""
+
+#: wp-smartbanner.php:192
+msgctxt "widget"
+msgid "Title"
+msgstr ""
+
+#: wp-smartbanner.php:193
+msgctxt "widget"
+msgid "Author"
+msgstr ""
+
+#: wp-smartbanner.php:194
+msgctxt "widget"
+msgid "Price"
+msgstr ""
+
+#: wp-smartbanner.php:195
+msgctxt "widget"
+msgid "Open"
+msgstr ""
+
+#: wp-smartbanner.php:196
+msgctxt "widget"
+msgid "Close"
+msgstr ""
+
+#: wp-smartbanner.php:197
+#: wp-smartbanner.php:198
+msgctxt "widget"
+msgid "Tagline"
+msgstr ""
