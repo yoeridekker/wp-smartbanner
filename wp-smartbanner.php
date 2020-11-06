@@ -3,7 +3,7 @@
  * Plugin Name: WP Smart Banner
  * Plugin URI: https://www.3eighty.nl/smartbanner
  * Description: A customisable WordPress smart app banner for iOS and Android.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Yoeri Dekker
  * Author URI: https://www.3eighty.nl
  * Text Domain: wp-smartbanner
