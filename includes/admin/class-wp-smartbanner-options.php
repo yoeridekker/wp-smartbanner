@@ -44,7 +44,7 @@ class WP_Smartbanner_Options extends WP_Smartbanner {
 			_x( 'Smartbanner', 'backend', 'wp-smartbanner' ), // title.
 			_x( 'Smartbanner', 'backend', 'wp-smartbanner' ), // menu_title.
 			'manage_options', // capability.
-			'smartbanner', // menu_slug.
+			'wp-smartbanner-settings', // menu_slug.
 			array( $this, 'smartbanner_create_admin_page' ), // function.
 			'dashicons-smartphone', // icon_url.
 			100 // position.

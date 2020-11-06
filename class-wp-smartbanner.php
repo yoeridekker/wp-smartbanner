@@ -130,10 +130,31 @@ class WP_Smartbanner {
 		}
 
 		// Add actions.
-		add_action( 'init', array( $this, 'init' ), 5 );
+		add_action( 'init', array( $this, 'init' ), 10 );
 		add_action( 'wp_head', array( $this, 'wp_head_meta' ), 99 );
-		add_action( 'wp_enqueue_scripts', array( $this, 'smartbanner_scripts' ) );
-		add_action( 'admin_enqueue_scripts', array( $this, 'smartbanner_admin_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'smartbanner_scripts' ), 10 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'smartbanner_admin_scripts' ), 10 );
+
+		// Filters.
+		add_filter( 'plugin_action_links_wp-smartbanner/wp-smartbanner.php', array( $this, 'add_plugin_page_settings_link' ), 10, 1 );
+	}
+
+	/**
+	 * Add the plugin settings link on the plugins overview.
+	 *
+	 * @date    03/11/20202
+	 * @since   1.0.0
+	 *
+	 * @param array $links The plugin links object.
+	 * @return array $links
+	 */
+	public function add_plugin_page_settings_link( $links ) {
+		$links[] = sprintf(
+			'<a href="%s">%s</a>',
+			admin_url( 'admin.php?page=wp-smartbanner-settings' ),
+			_x( 'Configuration', 'backend', 'wp-smartbanner' )
+		);
+		return $links;
 	}
 
 	/**

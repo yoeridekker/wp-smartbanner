@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-11-06T21:20:49+00:00\n"
+"POT-Creation-Date: 2020-11-06T21:36:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: wp-smartbanner\n"
@@ -39,33 +39,38 @@ msgctxt "backend"
 msgid "WP Smartbanner"
 msgstr ""
 
-#: class-wp-smartbanner.php:245
+#: class-wp-smartbanner.php:155
+msgctxt "backend"
+msgid "Configuration"
+msgstr ""
+
+#: class-wp-smartbanner.php:266
 msgctxt "widget"
 msgid "Title"
 msgstr ""
 
-#: class-wp-smartbanner.php:246
+#: class-wp-smartbanner.php:267
 msgctxt "widget"
 msgid "Author"
 msgstr ""
 
-#: class-wp-smartbanner.php:247
+#: class-wp-smartbanner.php:268
 msgctxt "widget"
 msgid "Price"
 msgstr ""
 
-#: class-wp-smartbanner.php:248
+#: class-wp-smartbanner.php:269
 msgctxt "widget"
 msgid "Open"
 msgstr ""
 
-#: class-wp-smartbanner.php:249
+#: class-wp-smartbanner.php:270
 msgctxt "widget"
 msgid "Close"
 msgstr ""
 
-#: class-wp-smartbanner.php:250
-#: class-wp-smartbanner.php:251
+#: class-wp-smartbanner.php:271
+#: class-wp-smartbanner.php:272
 msgctxt "widget"
 msgid "Tagline"
 msgstr ""
