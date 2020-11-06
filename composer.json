@@ -15,14 +15,16 @@
         "rm -rf wpcs",
         "composer create-project wp-coding-standards/wpcs:dev-master --no-dev",
         "vendor/bin/phpcs --config-set installed_paths wpcs",
-        "vendor/bin/phpcs -i"
+        "vendor/bin/phpcs -i",
+        "bash setup.sh"
     ],
     "post-install-cmd": [
         "vendor/bin/phpcs --version",
         "rm -rf wpcs",
         "composer create-project wp-coding-standards/wpcs:dev-master --no-dev",
         "vendor/bin/phpcs --config-set installed_paths wpcs",
-        "vendor/bin/phpcs -i"
+        "vendor/bin/phpcs -i",
+        "bash setup.sh"
     ]
   },
   "require": {
