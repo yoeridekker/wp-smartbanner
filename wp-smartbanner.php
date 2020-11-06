@@ -115,14 +115,14 @@ class WP_Smartbanner
 
     public function smartbanner_scripts(){
         if( $this->has_setting('url') ){
-            wp_enqueue_style( 'smartbanner', $this->get_setting('url') . 'assets/css/smartbanner.css' );
-            wp_enqueue_script( 'smartbanner', $this->get_setting('url') . 'assets/js/smartbanner.js' , [], $this->get_setting('version'), true );
+            wp_enqueue_style( 'smartbanner', $this->get_setting('url') . 'assets/css/smartbanner.min.css' );
+            wp_enqueue_script( 'smartbanner', $this->get_setting('url') . 'assets/js/smartbanner.min.js' , [], $this->get_setting('version'), true );
         }
     }
 
     public function smartbanner_admin_scripts( $hook ) {
         if( 'toplevel_page_smartbanner' === $hook && $this->has_setting('url') ){
-            wp_enqueue_script( 'smartbanner-admin', $this->get_setting('url') . 'assets/js/smartbanner-admin.js', ['jquery'], $this->get_setting('version'), true );
+            wp_enqueue_script( 'smartbanner-admin', $this->get_setting('url') . 'assets/js/smartbanner-admin.min.js', ['jquery'], $this->get_setting('version'), true );
         }
     }
 
