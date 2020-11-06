@@ -1,3 +1,5 @@
+/vendor/
+/wpcs/
 /node_modules/
 /languages/
 !/languages/wp-smartbanner.pot

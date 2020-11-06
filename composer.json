@@ -1,0 +1,31 @@
+{
+  "name": "yoeridekker/wp-smartbanner",
+  "description": "A customisable WordPress smart app banner for iOS and Android.",
+  "type": "wordpress-plugin",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "authors": [
+    {
+      "name": "Yoeri Dekker",
+      "email": "yoeri@acato.nl"
+    }
+  ],
+  "scripts": {
+    "post-update-cmd": [
+        "vendor/bin/phpcs --version",
+        "rm -rf wpcs",
+        "composer create-project wp-coding-standards/wpcs:dev-master --no-dev",
+        "vendor/bin/phpcs --config-set installed_paths wpcs",
+        "vendor/bin/phpcs -i"
+    ],
+    "post-install-cmd": [
+        "vendor/bin/phpcs --version",
+        "rm -rf wpcs",
+        "composer create-project wp-coding-standards/wpcs:dev-master --no-dev",
+        "vendor/bin/phpcs --config-set installed_paths wpcs",
+        "vendor/bin/phpcs -i"
+    ]
+  },
+  "require": {
+    "squizlabs/php_codesniffer": "3.*"
+  }
+}
