@@ -148,6 +148,10 @@ class WP_Smartbanner {
 		if ( $this->has_setting( 'url' ) ) {
 			wp_enqueue_style( 'smartbanner', $this->get_setting( 'url' ) . 'assets/css/smartbanner.min.css', array(), $this->get_setting( 'version' ) );
 			wp_enqueue_script( 'smartbanner', $this->get_setting( 'url' ) . 'assets/js/smartbanner.min.js', array(), $this->get_setting( 'version' ), true );
+
+			// Add custom postioning css.
+			$custom_css = sprintf( '.smartbanner{%s: 0 !important;}', esc_html( $this->get_option( 'widget_display_position' ) ) );
+			wp_add_inline_style( 'smartbanner', $custom_css );
 		}
 	}
 
@@ -205,6 +209,7 @@ class WP_Smartbanner {
 				}
 			}
 			printf( '<meta name="smartbanner:enabled-platforms" content="%s">%s', implode( ',', array_map( 'esc_html', $platforms ) ), PHP_EOL );
+			echo '<meta name="smartbanner:disable-positioning" content="true">';
 			echo '<!-- End SmartBanner configuration -->' . PHP_EOL;
 		}
 
@@ -240,6 +245,7 @@ class WP_Smartbanner {
 			'close_label'               => _x( 'Close', 'widget', 'wp-smartbanner' ),
 			'apple_app_store_tagline'   => _x( 'Tagline', 'widget', 'wp-smartbanner' ),
 			'google_play_store_tagline' => _x( 'Tagline', 'widget', 'wp-smartbanner' ),
+			'widget_display_position'   => 'bottom',
 		);
 
 	}

@@ -41,8 +41,7 @@ class WP_Smartbanner_Options extends WP_Smartbanner {
 	 */
 	public function smartbanner_add_plugin_page() {
 		add_menu_page(
-			_x( 'Smartbanner', 'backend', 'wp-smartbanner' ),
-			_title .
+			_x( 'Smartbanner', 'backend', 'wp-smartbanner' ), // title.
 			_x( 'Smartbanner', 'backend', 'wp-smartbanner' ), // menu_title.
 			'manage_options', // capability.
 			'smartbanner', // menu_slug.
@@ -199,6 +198,14 @@ class WP_Smartbanner_Options extends WP_Smartbanner {
 			'google_play_store_tagline',
 			_x( 'Google Play Store tagline', 'backend', 'wp-smartbanner' ),
 			array( $this, 'google_play_store_tagline_callback' ),
+			'smartbanner-admin',
+			'smartbanner_setting_section'
+		);
+
+		add_settings_field(
+			'widget_display_position',
+			_x( 'Widget display position', 'backend', 'wp-smartbanner' ),
+			array( $this, 'widget_display_position_callback' ),
 			'smartbanner-admin',
 			'smartbanner_setting_section'
 		);
@@ -486,6 +493,28 @@ class WP_Smartbanner_Options extends WP_Smartbanner {
 			'<input class="regular-text" type="text" name="wp_smartbanner_options_fields[google_play_store_tagline]" id="google_play_store_tagline" placeholder="%s" value="%s">',
 			$this->get_default( 'google_play_store_tagline' ),
 			! empty( $this->smartbanner_options['google_play_store_tagline'] ) ? esc_attr( $this->smartbanner_options['google_play_store_tagline'] ) : ''
+		);
+	}
+
+	/**
+	 * Function widget_display_position_callback.
+	 *
+	 * @date    23/06/12
+	 * @since   1.0.0
+	 *
+	 * @return void
+	 */
+	public function widget_display_position_callback() {
+		$value = isset( $this->smartbanner_options['widget_display_position'] ) ? $this->smartbanner_options['widget_display_position'] : $this->get_default( 'widget_display_position' );
+		printf(
+			'<select name="wp_smartbanner_options_fields[widget_display_position]" id="widget_display_position">
+                <option value="top" %s>%s</option>
+                <option value="bottom" %s>%s</option>
+            </select>',
+			selected( $value, 'top', false ),
+			esc_html( _x( 'Top', 'backend', 'wp-smartbanner' ) ),
+			selected( $value, 'bottom', false ),
+			esc_html( _x( 'Bottom', 'backend', 'wp-smartbanner' ) )
 		);
 	}
 
