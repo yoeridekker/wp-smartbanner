@@ -132,7 +132,7 @@ export default class SmartBanner {
 
   get html() {
     let modifier = !this.options.customDesignModifier ? this.platform : this.options.customDesignModifier;
-    return `<div class="smartbanner smartbanner--${modifier} js_smartbanner">
+    return `<div class="wp-smartbanner smartbanner smartbanner--${modifier} js_smartbanner">
       <a href="javascript:void();" class="smartbanner__exit js_smartbanner__exit" aria-label="${this.closeLabel}"></a>
       <div class="smartbanner__icon" style="background-image: url(${this.icon});"></div>
       <div class="smartbanner__info">
