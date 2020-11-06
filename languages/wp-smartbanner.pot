@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-11-06T21:05:52+00:00\n"
+"POT-Creation-Date: 2020-11-06T21:20:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: wp-smartbanner\n"
@@ -39,33 +39,33 @@ msgctxt "backend"
 msgid "WP Smartbanner"
 msgstr ""
 
-#: class-wp-smartbanner.php:241
+#: class-wp-smartbanner.php:245
 msgctxt "widget"
 msgid "Title"
 msgstr ""
 
-#: class-wp-smartbanner.php:242
+#: class-wp-smartbanner.php:246
 msgctxt "widget"
 msgid "Author"
 msgstr ""
 
-#: class-wp-smartbanner.php:243
+#: class-wp-smartbanner.php:247
 msgctxt "widget"
 msgid "Price"
 msgstr ""
 
-#: class-wp-smartbanner.php:244
+#: class-wp-smartbanner.php:248
 msgctxt "widget"
 msgid "Open"
 msgstr ""
 
-#: class-wp-smartbanner.php:245
+#: class-wp-smartbanner.php:249
 msgctxt "widget"
 msgid "Close"
 msgstr ""
 
-#: class-wp-smartbanner.php:246
-#: class-wp-smartbanner.php:247
+#: class-wp-smartbanner.php:250
+#: class-wp-smartbanner.php:251
 msgctxt "widget"
 msgid "Tagline"
 msgstr ""
@@ -162,12 +162,17 @@ msgctxt "backend"
 msgid "Widget display position"
 msgstr ""
 
-#: includes/admin/class-wp-smartbanner-options.php:515
+#: includes/admin/class-wp-smartbanner-options.php:215
+msgctxt "backend"
+msgid "Widget display position offset"
+msgstr ""
+
+#: includes/admin/class-wp-smartbanner-options.php:531
 msgctxt "backend"
 msgid "Top"
 msgstr ""
 
-#: includes/admin/class-wp-smartbanner-options.php:517
+#: includes/admin/class-wp-smartbanner-options.php:533
 msgctxt "backend"
 msgid "Bottom"
 msgstr ""

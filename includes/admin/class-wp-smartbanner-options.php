@@ -210,6 +210,14 @@ class WP_Smartbanner_Options extends WP_Smartbanner {
 			'smartbanner_setting_section'
 		);
 
+		add_settings_field(
+			'widget_display_position_offset',
+			_x( 'Widget display position offset', 'backend', 'wp-smartbanner' ),
+			array( $this, 'widget_display_position_offset_callback' ),
+			'smartbanner-admin',
+			'smartbanner_setting_section'
+		);
+
 	}
 
 	/**
@@ -273,6 +281,14 @@ class WP_Smartbanner_Options extends WP_Smartbanner {
 
 		if ( isset( $input['google_play_store_tagline'] ) ) {
 			$sanitary_values['google_play_store_tagline'] = sanitize_text_field( $input['google_play_store_tagline'] );
+		}
+
+		if ( isset( $input['widget_display_position'] ) ) {
+			$sanitary_values['widget_display_position'] = sanitize_text_field( $input['widget_display_position'] );
+		}
+
+		if ( isset( $input['widget_display_position_offset'] ) ) {
+			$sanitary_values['widget_display_position_offset'] = sanitize_text_field( $input['widget_display_position_offset'] );
 		}
 
 		return $sanitary_values;
@@ -515,6 +531,22 @@ class WP_Smartbanner_Options extends WP_Smartbanner {
 			esc_html( _x( 'Top', 'backend', 'wp-smartbanner' ) ),
 			selected( $value, 'bottom', false ),
 			esc_html( _x( 'Bottom', 'backend', 'wp-smartbanner' ) )
+		);
+	}
+
+	/**
+	 * Function widget_display_position_offset.
+	 *
+	 * @date    23/06/12
+	 * @since   1.0.0
+	 *
+	 * @return void
+	 */
+	public function widget_display_position_offset_callback() {
+		printf(
+			'<input class="small-text" type="text" name="wp_smartbanner_options_fields[widget_display_position_offset]" id="widget_display_position_offset" placeholder="%s" value="%s">',
+			$this->get_default( 'widget_display_position_offset' ),
+			! empty( $this->smartbanner_options['widget_display_position_offset'] ) ? esc_attr( $this->smartbanner_options['widget_display_position_offset'] ) : ''
 		);
 	}
 

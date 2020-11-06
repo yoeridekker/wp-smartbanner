@@ -150,7 +150,11 @@ class WP_Smartbanner {
 			wp_enqueue_script( 'smartbanner', $this->get_setting( 'url' ) . 'assets/js/smartbanner.min.js', array(), $this->get_setting( 'version' ), true );
 
 			// Add custom postioning css.
-			$custom_css = sprintf( '.smartbanner{%s: 0 !important;}', esc_html( $this->get_option( 'widget_display_position' ) ) );
+			$custom_css = sprintf(
+				'.smartbanner{%s: %s !important;}',
+				esc_html( $this->get_option( 'widget_display_position' ) ),
+				esc_html( $this->get_option( 'widget_display_position_offset' ) )
+			);
 			wp_add_inline_style( 'smartbanner', $custom_css );
 		}
 	}
@@ -238,14 +242,15 @@ class WP_Smartbanner {
 
 		// Set translations for default values.
 		self::$defaults = array(
-			'app_name'                  => _x( 'Title', 'widget', 'wp-smartbanner' ),
-			'author_name'               => _x( 'Author', 'widget', 'wp-smartbanner' ),
-			'price'                     => _x( 'Price', 'widget', 'wp-smartbanner' ),
-			'view_label'                => _x( 'Open', 'widget', 'wp-smartbanner' ),
-			'close_label'               => _x( 'Close', 'widget', 'wp-smartbanner' ),
-			'apple_app_store_tagline'   => _x( 'Tagline', 'widget', 'wp-smartbanner' ),
-			'google_play_store_tagline' => _x( 'Tagline', 'widget', 'wp-smartbanner' ),
-			'widget_display_position'   => 'bottom',
+			'app_name'                       => _x( 'Title', 'widget', 'wp-smartbanner' ),
+			'author_name'                    => _x( 'Author', 'widget', 'wp-smartbanner' ),
+			'price'                          => _x( 'Price', 'widget', 'wp-smartbanner' ),
+			'view_label'                     => _x( 'Open', 'widget', 'wp-smartbanner' ),
+			'close_label'                    => _x( 'Close', 'widget', 'wp-smartbanner' ),
+			'apple_app_store_tagline'        => _x( 'Tagline', 'widget', 'wp-smartbanner' ),
+			'google_play_store_tagline'      => _x( 'Tagline', 'widget', 'wp-smartbanner' ),
+			'widget_display_position'        => 'bottom',
+			'widget_display_position_offset' => '0px',
 		);
 
 	}
