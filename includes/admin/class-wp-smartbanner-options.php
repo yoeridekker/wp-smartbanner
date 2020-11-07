@@ -232,23 +232,23 @@ class WP_Smartbanner_Options extends WP_Smartbanner {
 	public function smartbanner_sanitize( $input ) {
 		$sanitary_values = array();
 		if ( isset( $input['app_name'] ) ) {
-			$sanitary_values['app_name'] = sanitize_text_field( $input['app_name'] );
+			$sanitary_values['app_name'] = esc_html( $input['app_name'] );
 		}
 
 		if ( isset( $input['author_name'] ) ) {
-			$sanitary_values['author_name'] = sanitize_text_field( $input['author_name'] );
+			$sanitary_values['author_name'] = esc_html( $input['author_name'] );
 		}
 
 		if ( isset( $input['price'] ) ) {
-			$sanitary_values['price'] = sanitize_text_field( $input['price'] );
+			$sanitary_values['price'] = esc_html( $input['price'] );
 		}
 
 		if ( isset( $input['view_label'] ) ) {
-			$sanitary_values['view_label'] = sanitize_text_field( $input['view_label'] );
+			$sanitary_values['view_label'] = esc_html( $input['view_label'] );
 		}
 
 		if ( isset( $input['close_label'] ) ) {
-			$sanitary_values['close_label'] = sanitize_text_field( $input['close_label'] );
+			$sanitary_values['close_label'] = esc_html( $input['close_label'] );
 		}
 
 		if ( isset( $input['show_on_ios'] ) ) {
@@ -256,15 +256,15 @@ class WP_Smartbanner_Options extends WP_Smartbanner {
 		}
 
 		if ( isset( $input['apple_app_store_url'] ) ) {
-			$sanitary_values['apple_app_store_url'] = sanitize_text_field( $input['apple_app_store_url'] );
+			$sanitary_values['apple_app_store_url'] = esc_html( $input['apple_app_store_url'] );
 		}
 
 		if ( isset( $input['apple_app_store_icon_url'] ) ) {
-			$sanitary_values['apple_app_store_icon_url'] = sanitize_text_field( $input['apple_app_store_icon_url'] );
+			$sanitary_values['apple_app_store_icon_url'] = esc_html( $input['apple_app_store_icon_url'] );
 		}
 
 		if ( isset( $input['apple_app_store_tagline'] ) ) {
-			$sanitary_values['apple_app_store_tagline'] = sanitize_text_field( $input['apple_app_store_tagline'] );
+			$sanitary_values['apple_app_store_tagline'] = esc_html( $input['apple_app_store_tagline'] );
 		}
 
 		if ( isset( $input['show_on_android'] ) ) {
@@ -272,23 +272,23 @@ class WP_Smartbanner_Options extends WP_Smartbanner {
 		}
 
 		if ( isset( $input['google_play_store_url'] ) ) {
-			$sanitary_values['google_play_store_url'] = sanitize_text_field( $input['google_play_store_url'] );
+			$sanitary_values['google_play_store_url'] = esc_html( $input['google_play_store_url'] );
 		}
 
 		if ( isset( $input['google_play_store_icon_url'] ) ) {
-			$sanitary_values['google_play_store_icon_url'] = sanitize_text_field( $input['google_play_store_icon_url'] );
+			$sanitary_values['google_play_store_icon_url'] = esc_html( $input['google_play_store_icon_url'] );
 		}
 
 		if ( isset( $input['google_play_store_tagline'] ) ) {
-			$sanitary_values['google_play_store_tagline'] = sanitize_text_field( $input['google_play_store_tagline'] );
+			$sanitary_values['google_play_store_tagline'] = esc_html( $input['google_play_store_tagline'] );
 		}
 
 		if ( isset( $input['widget_display_position'] ) ) {
-			$sanitary_values['widget_display_position'] = sanitize_text_field( $input['widget_display_position'] );
+			$sanitary_values['widget_display_position'] = esc_html( $input['widget_display_position'] );
 		}
 
 		if ( isset( $input['widget_display_position_offset'] ) ) {
-			$sanitary_values['widget_display_position_offset'] = sanitize_text_field( $input['widget_display_position_offset'] );
+			$sanitary_values['widget_display_position_offset'] = esc_html( $input['widget_display_position_offset'] );
 		}
 
 		return $sanitary_values;
